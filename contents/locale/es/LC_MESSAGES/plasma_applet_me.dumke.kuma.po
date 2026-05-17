@@ -1,0 +1,327 @@
+# Spanish translations for PACKAGE package
+# Traducciones al español para el paquete PACKAGE.
+# Copyright (C) 2026 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-17 13:25+0200\n"
+"PO-Revision-Date: 2026-05-17 13:25+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: contents/ui/configAppearance.qml:26
+msgid "Panel appearance:"
+msgstr "Apariencia del panel:"
+
+#: contents/ui/configAppearance.qml:28
+msgid "Normal — status dot with summary text"
+msgstr "Normal — punto de estado con resumen"
+
+#: contents/ui/configAppearance.qml:29
+msgid "Compact — status dot only"
+msgstr "Compacto — solo punto de estado"
+
+#: contents/ui/configAppearance.qml:36
+msgid "Show summary text next to the panel dot"
+msgstr "Mostrar texto resumen junto al punto del panel"
+
+#: contents/ui/configAppearance.qml:46
+msgid "Monitor rows:"
+msgstr "Filas de monitor:"
+
+#: contents/ui/configAppearance.qml:47
+msgid "Show latency value"
+msgstr "Mostrar valor de latencia"
+
+#: contents/ui/configAppearance.qml:53
+msgid "Show uptime badges (24h)"
+msgstr "Mostrar insignias de uptime (24 h)"
+
+#: contents/ui/configAppearance.qml:59
+msgid "Show calculated uptime percentage"
+msgstr "Mostrar porcentaje de uptime calculado"
+
+#: contents/ui/configAppearance.qml:70
+msgid ""
+"Badge fetching is wired in the next release; the toggles already store but "
+"have no UI effect yet."
+msgstr ""
+
+#: contents/ui/configAppearance.qml:78
+msgid "Services to display:"
+msgstr "Servicios a mostrar:"
+
+#: contents/ui/configAppearance.qml:80
+msgid "Comma-separated names, empty = show all (max 10)"
+msgstr ""
+
+#: contents/ui/configAppearance.qml:91
+msgid "Matches monitors by name or id. Whitespace around commas is trimmed."
+msgstr ""
+
+#: contents/ui/configConnection.qml:25
+msgid "Keyring error: %1"
+msgstr ""
+
+#: contents/ui/configConnection.qml:27
+msgid "Stored (%1 characters)"
+msgstr "Guardada (%1 caracteres)"
+
+#: contents/ui/configConnection.qml:29
+msgid "Not set"
+msgstr "No definida"
+
+#: contents/ui/configConnection.qml:39
+msgid "Save failed: %1"
+msgstr ""
+
+#: contents/ui/configConnection.qml:52
+msgid "Clear failed: %1"
+msgstr ""
+
+#: contents/ui/configConnection.qml:63
+msgid "Base URL:"
+msgstr "URL base:"
+
+#: contents/ui/configConnection.qml:71
+msgid "Demo mode:"
+msgstr "Modo demo:"
+
+#: contents/ui/configConnection.qml:72
+msgid "Render mock monitors without contacting the server"
+msgstr "Mostrar monitores de prueba sin contactar al servidor"
+
+#: contents/ui/configConnection.qml:82
+msgid "Fetch mode:"
+msgstr "Modo de consulta:"
+
+#: contents/ui/configConnection.qml:84
+msgid "Public status page"
+msgstr "Página de estado pública"
+
+#: contents/ui/configConnection.qml:85
+msgid "Private API (token)"
+msgstr "API privada (token)"
+
+#: contents/ui/configConnection.qml:86
+msgid "Prometheus metrics"
+msgstr "Métricas de Prometheus"
+
+#: contents/ui/configConnection.qml:93
+msgid "Status page slug:"
+msgstr "Slug de la página de estado:"
+
+#: contents/ui/configConnection.qml:102
+msgid "Status page endpoint:"
+msgstr "Endpoint de la página de estado:"
+
+#: contents/ui/configConnection.qml:111
+msgid "Override JSON URL:"
+msgstr ""
+
+#: contents/ui/configConnection.qml:114
+msgid "Optional full URL — overrides slug/endpoint"
+msgstr ""
+
+#: contents/ui/configConnection.qml:120
+msgid "API endpoint:"
+msgstr "Endpoint de la API:"
+
+#: contents/ui/configConnection.qml:129
+msgid "Metrics endpoint:"
+msgstr "Endpoint de métricas:"
+
+#: contents/ui/configConnection.qml:141
+msgid "API key status:"
+msgstr "Estado de la clave API:"
+
+#: contents/ui/configConnection.qml:142
+msgid "Working…"
+msgstr "Procesando…"
+
+#: contents/ui/configConnection.qml:147
+msgid "New API key:"
+msgstr "Nueva clave API:"
+
+#: contents/ui/configConnection.qml:151
+msgid "Paste token, then click Save"
+msgstr ""
+
+#: contents/ui/configConnection.qml:161
+msgid "Save key"
+msgstr "Guardar clave"
+
+#: contents/ui/configConnection.qml:166
+msgid "Clear stored key"
+msgstr "Borrar clave guardada"
+
+#: contents/ui/configConnection.qml:176
+msgid "Refresh every:"
+msgstr "Actualizar cada:"
+
+#: contents/ui/configConnection.qml:187
+msgid "Log level:"
+msgstr "Nivel de registro:"
+
+#: contents/ui/configConnection.qml:188
+msgid "Error"
+msgstr "Error"
+
+#: contents/ui/configConnection.qml:188
+msgid "Info"
+msgstr "Info"
+
+#: contents/ui/configConnection.qml:188
+msgid "Debug"
+msgstr "Depuración"
+
+#: contents/ui/configNotifications.qml:13
+msgid "Notifications:"
+msgstr "Notificaciones:"
+
+#: contents/ui/configNotifications.qml:14
+msgid "Notify on outages and degraded monitors"
+msgstr "Notificar en caídas y monitores degradados"
+
+#: contents/ui/configNotifications.qml:20
+msgid "Also notify when a monitor recovers"
+msgstr "Notificar también al recuperarse un monitor"
+
+#: contents/ui/configNotifications.qml:33
+msgid ""
+"Notifications are sent through the standard freedesktop notification "
+"service. Critical urgency is used for fully-down monitors; normal urgency "
+"for degraded and recovery messages."
+msgstr ""
+
+#: contents/ui/FullRepresentation.qml:51
+msgid "Uptime Kuma"
+msgstr "Uptime Kuma"
+
+#: contents/ui/FullRepresentation.qml:57
+msgid "%1 up · %2 down · %3 total"
+msgstr "%1 activos · %2 caídos · %3 totales"
+
+#: contents/ui/FullRepresentation.qml:80
+msgid "Couldn’t fetch monitors"
+msgstr "No se pudieron obtener los monitores"
+
+#: contents/ui/FullRepresentation.qml:81
+msgid "No monitors"
+msgstr "Sin monitores"
+
+#: contents/ui/FullRepresentation.qml:86
+msgid "Demo mode is on but no mock data is loaded."
+msgstr "El modo demo está activo pero no se cargaron datos de prueba."
+
+#: contents/ui/FullRepresentation.qml:88
+msgid "Set your Uptime Kuma base URL in widget settings, or enable Demo Mode."
+msgstr "Configura la URL base de Uptime Kuma en los ajustes del widget, o activa el modo demo."
+
+#: contents/ui/FullRepresentation.qml:90
+msgid "Loading…"
+msgstr "Cargando…"
+
+#: contents/ui/FullRepresentation.qml:91
+msgid "No monitors returned from the configured endpoint."
+msgstr "El endpoint configurado no devolvió monitores."
+
+#: contents/ui/main.qml:149
+msgid "Recovered: %1"
+msgstr "Recuperado: %1"
+
+#: contents/ui/main.qml:151 contents/ui/main.qml:408
+msgid "Down: %1"
+msgstr "Caído: %1"
+
+#: contents/ui/main.qml:152 contents/ui/main.qml:410
+msgid "Degraded: %1"
+msgstr "Degradado: %1"
+
+#: contents/ui/main.qml:155
+msgid "Status changed from %1 to %2"
+msgstr "El estado cambió de %1 a %2"
+
+#: contents/ui/main.qml:390
+msgid "Last fetch failed: %1"
+msgstr "La última consulta falló: %1"
+
+#: contents/ui/main.qml:392
+msgid "No monitors loaded yet."
+msgstr "Aún no se cargaron monitores."
+
+#: contents/ui/main.qml:404
+msgid "%1 up · %2 down · %3 degraded · %4 total"
+msgstr "%1 activos · %2 caídos · %3 degradados · %4 totales"
+
+#: contents/ui/MonitorRow.qml:75
+#, javascript-format
+msgctxt "X seconds ago"
+msgid "%1s ago"
+msgstr "hace %1 s"
+
+#: contents/ui/MonitorRow.qml:76
+msgctxt "X minutes ago"
+msgid "%1m ago"
+msgstr "hace %1 min"
+
+#: contents/ui/MonitorRow.qml:77
+msgctxt "X hours ago"
+msgid "%1h ago"
+msgstr "hace %1 h"
+
+#: contents/ui/MonitorRow.qml:78
+#, javascript-format
+msgctxt "X days ago"
+msgid "%1d ago"
+msgstr "hace %1 d"
+
+#: contents/code/parsers.js:241
+msgid "Unnamed monitor"
+msgstr "Monitor sin nombre"
+
+#: contents/code/parsers.js:390
+msgid "Certificate invalid"
+msgstr ""
+
+#: contents/code/parsers.js:395
+#, javascript-format
+msgid "Certificate expired %d days ago"
+msgstr ""
+
+#: contents/code/parsers.js:487
+msgid "Frontend"
+msgstr ""
+
+#: contents/code/parsers.js:494
+msgid "API Gateway"
+msgstr ""
+
+#: contents/code/parsers.js:498
+msgid "Slight latency increase detected"
+msgstr ""
+
+#: contents/code/parsers.js:502
+msgid "Database"
+msgstr ""
+
+#: contents/code/parsers.js:505
+msgid "No heartbeat received"
+msgstr ""
+
+#: contents/code/parsers.js:509
+msgid "Background Jobs"
+msgstr ""
+
+#: contents/code/parsers.js:516
+msgid "External Ping"
+msgstr ""

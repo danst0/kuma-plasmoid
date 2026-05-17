@@ -1,0 +1,326 @@
+# Japanese translations for PACKAGE package.
+# Copyright (C) 2026 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-17 13:25+0200\n"
+"PO-Revision-Date: 2026-05-17 13:25+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ja_JA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: contents/ui/configAppearance.qml:26
+msgid "Panel appearance:"
+msgstr "パネル外観:"
+
+#: contents/ui/configAppearance.qml:28
+msgid "Normal — status dot with summary text"
+msgstr "標準 — ステータスドットと概要テキスト"
+
+#: contents/ui/configAppearance.qml:29
+msgid "Compact — status dot only"
+msgstr "コンパクト — ステータスドットのみ"
+
+#: contents/ui/configAppearance.qml:36
+msgid "Show summary text next to the panel dot"
+msgstr "パネルドットの横に概要テキストを表示"
+
+#: contents/ui/configAppearance.qml:46
+msgid "Monitor rows:"
+msgstr "モニター行:"
+
+#: contents/ui/configAppearance.qml:47
+msgid "Show latency value"
+msgstr "レイテンシを表示"
+
+#: contents/ui/configAppearance.qml:53
+msgid "Show uptime badges (24h)"
+msgstr "稼働時間バッジ (24 時間) を表示"
+
+#: contents/ui/configAppearance.qml:59
+msgid "Show calculated uptime percentage"
+msgstr "計算された稼働率を表示"
+
+#: contents/ui/configAppearance.qml:70
+msgid ""
+"Badge fetching is wired in the next release; the toggles already store but "
+"have no UI effect yet."
+msgstr ""
+
+#: contents/ui/configAppearance.qml:78
+msgid "Services to display:"
+msgstr "表示するサービス:"
+
+#: contents/ui/configAppearance.qml:80
+msgid "Comma-separated names, empty = show all (max 10)"
+msgstr ""
+
+#: contents/ui/configAppearance.qml:91
+msgid "Matches monitors by name or id. Whitespace around commas is trimmed."
+msgstr ""
+
+#: contents/ui/configConnection.qml:25
+msgid "Keyring error: %1"
+msgstr ""
+
+#: contents/ui/configConnection.qml:27
+msgid "Stored (%1 characters)"
+msgstr "保存済み (%1 文字)"
+
+#: contents/ui/configConnection.qml:29
+msgid "Not set"
+msgstr "未設定"
+
+#: contents/ui/configConnection.qml:39
+msgid "Save failed: %1"
+msgstr ""
+
+#: contents/ui/configConnection.qml:52
+msgid "Clear failed: %1"
+msgstr ""
+
+#: contents/ui/configConnection.qml:63
+msgid "Base URL:"
+msgstr "ベース URL:"
+
+#: contents/ui/configConnection.qml:71
+msgid "Demo mode:"
+msgstr "デモモード:"
+
+#: contents/ui/configConnection.qml:72
+msgid "Render mock monitors without contacting the server"
+msgstr "サーバーに接続せず、テストモニターを表示"
+
+#: contents/ui/configConnection.qml:82
+msgid "Fetch mode:"
+msgstr "取得モード:"
+
+#: contents/ui/configConnection.qml:84
+msgid "Public status page"
+msgstr "公開ステータスページ"
+
+#: contents/ui/configConnection.qml:85
+msgid "Private API (token)"
+msgstr "プライベート API (トークン)"
+
+#: contents/ui/configConnection.qml:86
+msgid "Prometheus metrics"
+msgstr "Prometheus メトリクス"
+
+#: contents/ui/configConnection.qml:93
+msgid "Status page slug:"
+msgstr "ステータスページのスラッグ:"
+
+#: contents/ui/configConnection.qml:102
+msgid "Status page endpoint:"
+msgstr "ステータスページのエンドポイント:"
+
+#: contents/ui/configConnection.qml:111
+msgid "Override JSON URL:"
+msgstr ""
+
+#: contents/ui/configConnection.qml:114
+msgid "Optional full URL — overrides slug/endpoint"
+msgstr ""
+
+#: contents/ui/configConnection.qml:120
+msgid "API endpoint:"
+msgstr "API エンドポイント:"
+
+#: contents/ui/configConnection.qml:129
+msgid "Metrics endpoint:"
+msgstr "メトリクスエンドポイント:"
+
+#: contents/ui/configConnection.qml:141
+msgid "API key status:"
+msgstr "API キーの状態:"
+
+#: contents/ui/configConnection.qml:142
+msgid "Working…"
+msgstr "処理中…"
+
+#: contents/ui/configConnection.qml:147
+msgid "New API key:"
+msgstr "新しい API キー:"
+
+#: contents/ui/configConnection.qml:151
+msgid "Paste token, then click Save"
+msgstr ""
+
+#: contents/ui/configConnection.qml:161
+msgid "Save key"
+msgstr "キーを保存"
+
+#: contents/ui/configConnection.qml:166
+msgid "Clear stored key"
+msgstr "保存されたキーを削除"
+
+#: contents/ui/configConnection.qml:176
+msgid "Refresh every:"
+msgstr "更新間隔:"
+
+#: contents/ui/configConnection.qml:187
+msgid "Log level:"
+msgstr "ログレベル:"
+
+#: contents/ui/configConnection.qml:188
+msgid "Error"
+msgstr "エラー"
+
+#: contents/ui/configConnection.qml:188
+msgid "Info"
+msgstr "情報"
+
+#: contents/ui/configConnection.qml:188
+msgid "Debug"
+msgstr "デバッグ"
+
+#: contents/ui/configNotifications.qml:13
+msgid "Notifications:"
+msgstr "通知:"
+
+#: contents/ui/configNotifications.qml:14
+msgid "Notify on outages and degraded monitors"
+msgstr "停止および性能低下時に通知"
+
+#: contents/ui/configNotifications.qml:20
+msgid "Also notify when a monitor recovers"
+msgstr "モニター復旧時にも通知"
+
+#: contents/ui/configNotifications.qml:33
+msgid ""
+"Notifications are sent through the standard freedesktop notification "
+"service. Critical urgency is used for fully-down monitors; normal urgency "
+"for degraded and recovery messages."
+msgstr ""
+
+#: contents/ui/FullRepresentation.qml:51
+msgid "Uptime Kuma"
+msgstr "Uptime Kuma"
+
+#: contents/ui/FullRepresentation.qml:57
+msgid "%1 up · %2 down · %3 total"
+msgstr "%1 稼働中・%2 停止・%3 合計"
+
+#: contents/ui/FullRepresentation.qml:80
+msgid "Couldn’t fetch monitors"
+msgstr "モニターを取得できませんでした"
+
+#: contents/ui/FullRepresentation.qml:81
+msgid "No monitors"
+msgstr "モニターがありません"
+
+#: contents/ui/FullRepresentation.qml:86
+msgid "Demo mode is on but no mock data is loaded."
+msgstr "デモモードはオンですが、テストデータが読み込まれていません。"
+
+#: contents/ui/FullRepresentation.qml:88
+msgid "Set your Uptime Kuma base URL in widget settings, or enable Demo Mode."
+msgstr "ウィジェット設定で Uptime Kuma のベース URL を指定するか、デモモードを有効にしてください。"
+
+#: contents/ui/FullRepresentation.qml:90
+msgid "Loading…"
+msgstr "読み込み中…"
+
+#: contents/ui/FullRepresentation.qml:91
+msgid "No monitors returned from the configured endpoint."
+msgstr "設定されたエンドポイントからモニターが返されませんでした。"
+
+#: contents/ui/main.qml:149
+msgid "Recovered: %1"
+msgstr "復旧: %1"
+
+#: contents/ui/main.qml:151 contents/ui/main.qml:408
+msgid "Down: %1"
+msgstr "停止: %1"
+
+#: contents/ui/main.qml:152 contents/ui/main.qml:410
+msgid "Degraded: %1"
+msgstr "低下: %1"
+
+#: contents/ui/main.qml:155
+msgid "Status changed from %1 to %2"
+msgstr "ステータスが %1 から %2 に変わりました"
+
+#: contents/ui/main.qml:390
+msgid "Last fetch failed: %1"
+msgstr "最後の取得に失敗しました: %1"
+
+#: contents/ui/main.qml:392
+msgid "No monitors loaded yet."
+msgstr "モニターはまだ読み込まれていません。"
+
+#: contents/ui/main.qml:404
+msgid "%1 up · %2 down · %3 degraded · %4 total"
+msgstr "%1 稼働中・%2 停止・%3 低下・%4 合計"
+
+#: contents/ui/MonitorRow.qml:75
+#, javascript-format
+msgctxt "X seconds ago"
+msgid "%1s ago"
+msgstr "%1 秒前"
+
+#: contents/ui/MonitorRow.qml:76
+msgctxt "X minutes ago"
+msgid "%1m ago"
+msgstr "%1 分前"
+
+#: contents/ui/MonitorRow.qml:77
+msgctxt "X hours ago"
+msgid "%1h ago"
+msgstr "%1 時間前"
+
+#: contents/ui/MonitorRow.qml:78
+#, javascript-format
+msgctxt "X days ago"
+msgid "%1d ago"
+msgstr "%1 日前"
+
+#: contents/code/parsers.js:241
+msgid "Unnamed monitor"
+msgstr "無名のモニター"
+
+#: contents/code/parsers.js:390
+msgid "Certificate invalid"
+msgstr ""
+
+#: contents/code/parsers.js:395
+#, javascript-format
+msgid "Certificate expired %d days ago"
+msgstr ""
+
+#: contents/code/parsers.js:487
+msgid "Frontend"
+msgstr ""
+
+#: contents/code/parsers.js:494
+msgid "API Gateway"
+msgstr ""
+
+#: contents/code/parsers.js:498
+msgid "Slight latency increase detected"
+msgstr ""
+
+#: contents/code/parsers.js:502
+msgid "Database"
+msgstr ""
+
+#: contents/code/parsers.js:505
+msgid "No heartbeat received"
+msgstr ""
+
+#: contents/code/parsers.js:509
+msgid "Background Jobs"
+msgstr ""
+
+#: contents/code/parsers.js:516
+msgid "External Ping"
+msgstr ""

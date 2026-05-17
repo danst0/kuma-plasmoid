@@ -1,0 +1,29 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "claude.ai.daniel@dumke.me",
+                "Name": "Daniel Dumke"
+            }
+        ],
+        "Category": "System Information",
+        "Description": "Shows Uptime Kuma monitor status in the panel and as a desktop widget.",
+        "Description[de]": "Zeigt den Status von Uptime-Kuma-Monitoren im Panel und als Desktop-Widget.",
+        "Icon": "network-server",
+        "Id": "me.dumke.kuma",
+        "License": "GPL-3.0-or-later",
+        "Name": "Uptime Kuma",
+        "Name[de]": "Uptime Kuma",
+        "ServiceTypes": [
+            "Plasma/Applet"
+        ],
+        "Version": "0.1.0",
+        "Website": "https://github.com/danst0/kuma-plasmoid"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-MainScript": "ui/main.qml",
+    "X-Plasma-Provides": [
+        "org.kde.plasma.systemmonitor"
+    ]
+}

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE kcfg SYSTEM "http://www.kde.org/standards/kcfg/1.0/kcfg.dtd">
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+                          http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+    <kcfgfile name=""/>
+
+    <group name="General">
+        <!-- Connection -->
+        <entry name="baseUrl" type="String">
+            <default></default>
+        </entry>
+        <entry name="apiMode" type="Enum">
+            <choices>
+                <choice name="StatusPage"/>
+                <choice name="ApiKey"/>
+                <choice name="Metrics"/>
+            </choices>
+            <default>StatusPage</default>
+        </entry>
+        <entry name="statusPageSlug" type="String">
+            <default>default</default>
+        </entry>
+        <entry name="statusPageEndpoint" type="String">
+            <default>status/{{slug}}/status.json</default>
+        </entry>
+        <entry name="statusPageJsonUrl" type="String">
+            <default></default>
+        </entry>
+        <entry name="apiEndpoint" type="String">
+            <default>api/monitor</default>
+        </entry>
+        <entry name="metricsEndpoint" type="String">
+            <default>metrics</default>
+        </entry>
+
+        <!-- Polling / behaviour -->
+        <entry name="refreshSeconds" type="Int">
+            <default>60</default>
+            <min>10</min>
+        </entry>
+        <entry name="demoMode" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="logLevel" type="Enum">
+            <choices>
+                <choice name="Error"/>
+                <choice name="Info"/>
+                <choice name="Debug"/>
+            </choices>
+            <default>Info</default>
+        </entry>
+
+        <!-- Appearance -->
+        <entry name="appearance" type="Enum">
+            <choices>
+                <choice name="Normal"/>
+                <choice name="Compact"/>
+            </choices>
+            <default>Normal</default>
+        </entry>
+        <entry name="showText" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="showLatency" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="showBadges" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="showCalculatedUptime" type="Bool">
+            <default>false</default>
+        </entry>
+
+        <!-- Service selection (max 10 enforced in QML) -->
+        <entry name="selectedServices" type="StringList">
+            <default></default>
+        </entry>
+
+        <!-- Notifications -->
+        <entry name="enableNotifications" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="notifyOnRecovery" type="Bool">
+            <default>true</default>
+        </entry>
+    </group>
+</kcfg>

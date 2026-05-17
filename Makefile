@@ -2,6 +2,7 @@ PLASMOID_ID := me.dumke.kuma
 PKG_DIR     := $(CURDIR)
 BUILD_DIR   := build
 PACK_NAME   := kuma-plasmoid.plasmoid
+TARBALL     := kuma-plasmoid.tar.gz
 
 KPACKAGETOOL ?= $(shell command -v kpackagetool6 2>/dev/null || echo kpackagetool)
 QMLLINT      ?= $(shell command -v qmllint6 2>/dev/null || command -v qmllint-qt6 2>/dev/null || echo qmllint)
@@ -16,14 +17,27 @@ PO_FILES  := $(wildcard contents/locale/*/LC_MESSAGES/*.po)
 MO_FILES  := $(PO_FILES:.po=.mo)
 POT_FILE  := contents/locale/plasma_applet_me.dumke.kuma.pot
 
-.PHONY: install upgrade reinstall remove pack clean lint pot translations \
-        preview-panel preview-desktop preview-vertical
+ICON_DIR := $(HOME)/.local/share/icons/hicolor/scalable/apps
+ICON_SRC := contents/icons/me.dumke.kuma.svg
 
-install: translations
+.PHONY: install upgrade reinstall remove pack pack-tar clean lint pot translations \
+        preview-panel preview-desktop preview-vertical install-icon
+
+install: translations install-icon
 	$(KPACKAGETOOL) --type Plasma/Applet --install $(PKG_DIR)
 
-upgrade: translations
+upgrade: translations install-icon
 	$(KPACKAGETOOL) --type Plasma/Applet --upgrade $(PKG_DIR)
+
+# Copies the SVG into the user's hicolor theme so the "Add Widgets" browser
+# (which uses KPlugin.Icon name lookup, not package-local paths) finds the
+# branded icon too. Falls back gracefully if the SVG isn't present.
+install-icon:
+	@if [ -f "$(ICON_SRC)" ]; then \
+		mkdir -p "$(ICON_DIR)"; \
+		cp "$(ICON_SRC)" "$(ICON_DIR)/me.dumke.kuma.svg"; \
+		echo "installed icon → $(ICON_DIR)/me.dumke.kuma.svg"; \
+	fi
 
 reinstall:
 	$(KPACKAGETOOL) --type Plasma/Applet --remove $(PLASMOID_ID) || true
@@ -63,6 +77,17 @@ pack: translations
 	rm -rf $(BUILD_DIR)
 	@echo "Built: $(PACK_NAME)"
 
+# OpenDesktop / store.kde.org accepts .tar.gz for the Files section. Same
+# payload as pack, different compression. Top-level dir matches the plugin id
+# so kpackagetool6 can install from it directly.
+pack-tar: translations
+	rm -rf $(BUILD_DIR)
+	mkdir -p $(BUILD_DIR)/$(PLASMOID_ID)
+	cp -r metadata.json contents $(BUILD_DIR)/$(PLASMOID_ID)/
+	tar -C $(BUILD_DIR) -czf $(TARBALL) $(PLASMOID_ID)
+	rm -rf $(BUILD_DIR)
+	@echo "Built: $(TARBALL)"
+
 clean:
-	rm -rf $(BUILD_DIR) $(PACK_NAME)
+	rm -rf $(BUILD_DIR) $(PACK_NAME) $(TARBALL)
 	find contents/locale -name '*.mo' -delete 2>/dev/null || true

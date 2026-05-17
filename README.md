@@ -1,5 +1,7 @@
 # Uptime Kuma Plasmoid
 
+<img src="docs/screenshots/logo.png" alt="Uptime Kuma Plasmoid logo" width="96" align="right">
+
 KDE Plasma 6 widget that polls an [Uptime Kuma](https://github.com/louislam/uptime-kuma)
 instance and shows monitor status in the panel and as a desktop widget.
 

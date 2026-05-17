@@ -3,6 +3,18 @@
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning
 follows the `KPlugin.Version` field in `metadata.json`.
 
+## [0.6.1] — 2026-05-17
+
+### Added
+- Custom logo SVG (`contents/icons/me.dumke.kuma.svg`) — bear silhouette with
+  a heartbeat trace. Wired as `Plasmoid.icon` via a package-local URL so the
+  branded icon shows wherever the package is installed.
+- `make install-icon` Makefile target — copies the SVG into the user's
+  `~/.local/share/icons/hicolor/scalable/apps/` so the "Add Widgets" browser
+  picks it up too. Now called automatically by `make install` / `make upgrade`.
+- `make pack-tar` target — produces `kuma-plasmoid.tar.gz` for store.kde.org
+  uploads that prefer tarballs over the `.plasmoid` (ZIP) bundle.
+
 ## [0.6.0] — 2026-05-17
 
 ### Added

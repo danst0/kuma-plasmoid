@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!--
+    Uptime Kuma Plasmoid icon
+    A stylized bear head ("Kuma") whose mouth is a heartbeat / uptime line.
+    Uses currentColor + an accent so the icon picks up the Plasma theme by
+    default but stays legible against any background.
+  -->
+  <g fill="none" stroke="currentColor" stroke-width="2.5"
+     stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Two ear tufts (kuma = bear) -->
+    <circle cx="13"  cy="13" r="4" fill="currentColor"/>
+    <circle cx="35"  cy="13" r="4" fill="currentColor"/>
+
+    <!-- Head — rounded square, leaves room for the pulse trace -->
+    <path d="M9 24
+             Q9 14 18 13.5
+             Q24 13 30 13.5
+             Q39 14 39 24
+             Q39 38 24 39
+             Q9 38 9 24 Z"
+          fill="none"/>
+
+    <!-- Heartbeat / uptime trace across the head -->
+    <polyline points="13,26 18,26 20,22 24,30 27,20 30,26 35,26"
+              stroke-width="2.8"
+              stroke="#3fbf60"/>
+  </g>
+</svg>

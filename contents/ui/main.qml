@@ -45,7 +45,7 @@ PlasmoidItem {
     // ----- Lifecycle -----
     Component.onCompleted: {
         Logger.setLevel(_logLevelName());
-        Logger.info("plasmoid initialized, version", "0.6.0");
+        Logger.info("plasmoid initialized, version", "0.6.1");
         refresh();
     }
 
@@ -432,5 +432,9 @@ PlasmoidItem {
         ? fullRepresentation
         : compactRepresentation
 
-    Plasmoid.icon: "network-server"
+    // Custom logo bundled with the package. The metadata.json KPlugin.Icon
+    // stays as a stock fallback ("network-server") so the "Add Widgets"
+    // browser still shows something on systems where the SVG hasn't been
+    // copied into an XDG icon theme.
+    Plasmoid.icon: Qt.resolvedUrl("../icons/me.dumke.kuma.svg")
 }

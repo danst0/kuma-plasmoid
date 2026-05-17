@@ -2,7 +2,19 @@ import QtQuick
 import org.kde.plasma.configuration
 
 ConfigModel {
-    // Config pages are added in later milestones (M3 connection, M5 full UI).
-    // For M1 the plasmoid runs with defaults + demoMode=true and is configured
-    // directly via Plasmoid.configuration in main.qml.
+    ConfigCategory {
+        name: i18n("Connection")
+        icon: "network-server"
+        source: "configConnection.qml"
+    }
+    ConfigCategory {
+        name: i18n("Appearance")
+        icon: "preferences-desktop-color"
+        source: "configAppearance.qml"
+    }
+    ConfigCategory {
+        name: i18n("Notifications")
+        icon: "preferences-desktop-notification"
+        source: "configNotifications.qml"
+    }
 }

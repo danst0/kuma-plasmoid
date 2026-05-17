@@ -3,9 +3,9 @@ PKG_DIR     := $(CURDIR)
 BUILD_DIR   := build
 PACK_NAME   := kuma-plasmoid.plasmoid
 
-KPACKAGETOOL ?= kpackagetool6
-QMLLINT      ?= qmllint6
-PLASMOIDVIEW ?= plasmoidviewer6
+KPACKAGETOOL ?= $(shell command -v kpackagetool6 2>/dev/null || echo kpackagetool)
+QMLLINT      ?= $(shell command -v qmllint6 2>/dev/null || command -v qmllint-qt6 2>/dev/null || echo qmllint)
+PLASMOIDVIEW ?= $(shell command -v plasmoidviewer6 2>/dev/null || echo plasmoidviewer)
 XGETTEXT     ?= xgettext
 MSGFMT       ?= msgfmt
 MSGMERGE     ?= msgmerge
@@ -14,7 +14,7 @@ QML_FILES := $(wildcard contents/ui/*.qml)
 JS_FILES  := $(wildcard contents/code/*.js)
 PO_FILES  := $(wildcard contents/locale/*/LC_MESSAGES/*.po)
 MO_FILES  := $(PO_FILES:.po=.mo)
-POT_FILE  := contents/locale/kuma-plasmoid.pot
+POT_FILE  := contents/locale/plasma_applet_me.dumke.kuma.pot
 
 .PHONY: install upgrade reinstall remove pack clean lint pot translations \
         preview-panel preview-desktop preview-vertical

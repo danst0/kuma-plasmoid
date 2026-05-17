@@ -12,6 +12,11 @@ RowLayout {
     property var lastCheckUnix: 0
     property string message: ""
     property bool showLatency: true
+    property bool showBadge: false
+    property var badgePercentage: undefined
+    // Bumped externally (FullRepresentation) every minute so the relative-time
+    // label refreshes between Kuma refresh cycles.
+    property int relativeTimeTick: 0
 
     spacing: Kirigami.Units.smallSpacing * 2
 
@@ -42,6 +47,12 @@ RowLayout {
         }
     }
 
+    UptimeBadge {
+        visible: row.showBadge && row.badgePercentage !== undefined
+        percentage: row.badgePercentage === undefined ? null : row.badgePercentage
+        Layout.alignment: Qt.AlignVCenter
+    }
+
     PlasmaComponents.Label {
         text: row.showLatency && row.latencyMs !== null && row.latencyMs !== undefined
               ? row.latencyMs + " ms"
@@ -52,18 +63,19 @@ RowLayout {
     }
 
     PlasmaComponents.Label {
-        text: row.lastCheckUnix > 0 ? relativeTime(row.lastCheckUnix) : ""
+        // depend on relativeTimeTick so the binding re-evaluates on each tick
+        text: row.lastCheckUnix > 0 ? relativeTime(row.lastCheckUnix, row.relativeTimeTick) : ""
         visible: text.length > 0
         opacity: 0.6
         font.pointSize: Kirigami.Theme.smallFont.pointSize
         Layout.alignment: Qt.AlignVCenter
 
-        function relativeTime(unix) {
+        function relativeTime(unix, _tick) {
             const deltaSec = Math.floor(Date.now() / 1000) - unix;
-            if (deltaSec < 60)   return deltaSec + "s ago";
-            if (deltaSec < 3600) return Math.floor(deltaSec / 60) + "m ago";
-            if (deltaSec < 86400) return Math.floor(deltaSec / 3600) + "h ago";
-            return Math.floor(deltaSec / 86400) + "d ago";
+            if (deltaSec < 60)    return i18nc("X seconds ago", "%1s ago", deltaSec);
+            if (deltaSec < 3600)  return i18nc("X minutes ago", "%1m ago", Math.floor(deltaSec / 60));
+            if (deltaSec < 86400) return i18nc("X hours ago",   "%1h ago", Math.floor(deltaSec / 3600));
+            return i18nc("X days ago", "%1d ago", Math.floor(deltaSec / 86400));
         }
     }
 }
